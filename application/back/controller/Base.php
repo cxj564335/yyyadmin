@@ -1,17 +1,15 @@
 <?php
-namespace app\index\controller;
+
+namespace app\back\controller;
 use think\Controller;
-use think\Session;
-use think\Url;
-use think\Config;
-use think\Page;
-use think\Verify;
-use think\Image;
 use think\Db;
-use think\Request;
+use think\Session;
 
 class Base extends Controller {
     function _initialize() {
-        
+       if(!(Session::has('admin'))){
+            header("Location: ".url('back/login/login'));
+            exit();
+        }
     }
 }

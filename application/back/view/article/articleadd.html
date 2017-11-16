@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人信息</title>
+	<meta name="renderer" content="webkit">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">	
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">	
+	<meta name="apple-mobile-web-app-capable" content="yes">	
+	<meta name="format-detection" content="telephone=no">	
+	<link rel="stylesheet" type="text/css" href="/static/common/layui/css/layui.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/static/common/bootstrap/css/bootstrap.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/static/common/global.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/static/css/personal.css" media="all">
+        
+        <!--百度编辑器-->
+        <link href="/server/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+        <script type="text/javascript" src="/server/umeditor/third-party/jquery.min.js"></script>
+        <script type="text/javascript" src="/server/umeditor/third-party/template.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/server/umeditor/umeditor.config.js"></script>
+        <script type="text/javascript" charset="utf-8" src="/server/umeditor/umeditor.min.js"></script>
+        <script type="text/javascript" src="/server/umeditor/lang/zh-cn/zh-cn.js"></script>
+        <style type="text/css">
+        h1{
+            font-family: "微软雅黑";
+            font-weight: normal;
+        }
+        .btn {
+            display: inline-block;
+            *display: inline;
+            padding: 4px 12px;
+            margin-bottom: 0;
+            *margin-left: .3em;
+            font-size: 14px;
+            line-height: 20px;
+            color: #333333;
+            text-align: center;
+            text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+            vertical-align: middle;
+            cursor: pointer;
+            background-color: #f5f5f5;
+            *background-color: #e6e6e6;
+            background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+            background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+            background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+            background-repeat: repeat-x;
+            border: 1px solid #cccccc;
+            *border: 0;
+            border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+            border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+            border-bottom-color: #b3b3b3;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            *zoom: 1;
+            -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn:hover,
+        .btn:focus,
+        .btn:active,
+        .btn.active,
+        .btn.disabled,
+        .btn[disabled] {
+            color: #333333;
+            background-color: #e6e6e6;
+            *background-color: #d9d9d9;
+        }
+
+        .btn:active,
+        .btn.active {
+            background-color: #cccccc \9;
+        }
+
+        .btn:first-child {
+            *margin-left: 0;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            color: #333333;
+            text-decoration: none;
+            background-position: 0 -15px;
+            -webkit-transition: background-position 0.1s linear;
+            -moz-transition: background-position 0.1s linear;
+            -o-transition: background-position 0.1s linear;
+            transition: background-position 0.1s linear;
+        }
+
+        .btn:focus {
+            outline: thin dotted #333;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
+
+        .btn.active,
+        .btn:active {
+            background-image: none;
+            outline: 0;
+            -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn.disabled,
+        .btn[disabled] {
+            cursor: default;
+            background-image: none;
+            opacity: 0.65;
+            filter: alpha(opacity=65);
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+    </style>
+    
+    <!--百度编辑器-->
+    
+</head>
+<body>
+<section class="layui-larry-box">
+	<div class="larry-personal">
+		<header class="larry-personal-tit">
+			<span>个人信息</span>
+		</header><!-- /header -->
+		<div class="larry-personal-body clearfix">
+			<form class="layui-form col-lg-5" action="" method="post">
+				<div class="layui-form-item">
+					<label class="layui-form-label">标题</label>
+					<div class="layui-input-block">
+						<input type="text" name="title"  autocomplete="off" class="layui-input" value="{if !empty($myarticle.title)}{$myarticle.title}{/if}"  placeholder="输入标题">
+						<input type="hidden" name="id" value="{if !empty($myarticle.id)}{$myarticle.id}{/if}" >
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">发布人id</label>
+					<div class="layui-input-block">
+                                            <input type="text" name="userid"  autocomplete="off" class="layui-input" value="{if !empty($myarticle.userid)}{$myarticle.userid}{/if}" placeholder="输入发布人id">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">发布人姓名</label>
+					<div class="layui-input-block">
+                                            <input type="text" name="username"  autocomplete="off" class="layui-input" value="{if !empty($myarticle.username)}{$myarticle.username}{/if}" placeholder="输入发布人姓名">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">头像</label>
+					<div class="layui-input-block">
+						<input type="file" name="file" class="layui-upload-file">
+                                                <img style="width: 36px;height: 36px;" class="myimg" src="{php}if(!empty($myarticle['avatar'])) echo imgUrl($myarticle['avatar']);else echo imgUrl(''){/php}">
+                                                <input type="text"  class="avatar layui-input-block" style="padding-left: 10px;width: 50%;margin-left: 10px;" name="avatar" value="{if !empty($myarticle.avatar)}{$myarticle.avatar}{/if}" >
+                                        </div>
+                                </div>   
+				<div class="layui-form-item">
+					<label class="layui-form-label">内容</label>
+					<div class="layui-input-block">
+                                            <!--<textarea name="content" placeholder="既然选择了远方，便只顾风雨兼程；路漫漫其修远兮，吾将上下而求索" value="" class="layui-textarea">{if !empty($myarticle.content)}{$myarticle.content}{/if}</textarea>-->
+                                            <script type="text/plain" name="content"  id="myEditor" style="width:1000px;height:240px;">
+                                                {if !empty($myarticle.content)}{$myarticle.content}{else/}{/if}
+                                            </script>
+                                        </div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">浏览量</label>
+					<div class="layui-input-block">
+                                            <input type="text" name="hits"  autocomplete="off" class="layui-input" value="{if !empty($myarticle.hits)}{$myarticle.hits}{/if}" placeholder="输入浏览量">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">点赞数</label>
+					<div class="layui-input-block">
+                                            <input type="text" name="zan"  autocomplete="off" class="layui-input" value="{if !empty($myarticle.zan)}{$myarticle.zan}{/if}" placeholder="输入点赞数">
+					</div>
+				</div>     
+                                <div class="layui-form-item">
+					<label class="layui-form-label">是否发布</label>
+					<div class="layui-input-block">
+						<input type="radio" name="status" value="0" title="发布" {if !empty($myarticle.status)}{if $myarticle.status == 0}checked=""{/if}{else/}checked=""{/if}><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><span>发布</span></div>
+						<input type="radio" name="status" value="1" title="下架" {if !empty($myarticle.status)}{if $myarticle.status == 1}checked=""{/if}{/if}><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>下架</span></div>
+					</div>
+				</div>
+				
+				
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="/static/common/layui/layui.js"></script>
+<script type="text/javascript">
+        
+	layui.use(['form','upload'],function(){
+         layui.upload({ 
+             url: '/server/fileupload.php',//上传接口 
+             success: function(res){
+                if(res.result){
+                    $('.avatar').val(res.result);
+                    $('.myimg').attr('src','/server/'+res.result);                    
+                }else{
+                    alert('上传失败');
+                }
+              console.log(res.result) 
+            } 
+         });
+
+	});
+</script>
+<script type="text/javascript">
+    //实例化编辑器
+    var um = UM.getEditor('myEditor');
+    um.addListener('blur',function(){
+        $('#focush2').html('编辑器失去焦点了')
+    });
+    um.addListener('focus',function(){
+        $('#focush2').html('')
+    });
+    //按钮的操作
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        um.execCommand('insertHtml', value)
+    }
+    function isFocus(){
+        alert(um.isFocus())
+    }
+    function doBlur(){
+        um.blur()
+    }
+    function createEditor() {
+        enableBtn();
+        um = UM.getEditor('myEditor');
+    }
+    function getAllHtml() {
+        alert(UM.getEditor('myEditor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UM.getEditor('myEditor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UM.getEditor('myEditor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用umeditor')方法可以设置编辑器的内容");
+        UM.getEditor('myEditor').setContent('欢迎使用umeditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UM.getEditor('myEditor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UM.getEditor('myEditor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UM.getEditor('myEditor').selection.getRange();
+        range.select();
+        var txt = UM.getEditor('myEditor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UM.getEditor('myEditor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UM.getEditor('myEditor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UM.getEditor('myEditor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UM.getEditor('myEditor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+</script>
+</body>
+</html>
